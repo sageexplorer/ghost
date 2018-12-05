@@ -1,0 +1,34 @@
+{
+  "name": "bot",
+  "version": "0.0.1",
+  "description": "test bot",
+  "main": "app.js",
+  "author": "Sage Rimal",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.x.x",
+    "chai": "^3.5.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.x.x",
+    "mocha": "^3.2.0",
+    "mocha-jenkins-reporter": "^0.3.7",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
+    "mysql": "^2.16.0",
+    "prettier": "^1.14.3",
+    "read-yaml": "^1.1.0",
+    "request": "2.56.x",
+    "request-promise": "^4.2.2",
+    "shelljs": "^0.8.2",
+    "supertest": "^3.0.0",
+    "system": "^2.0.1"
+  },
+  "scripts": {
+    "prestart": "npm install;",
+    "start": "JUNIT_REPORT_PATH=test-result/result.xml JUNIT_REPORT_STACK=1 mocha --timeout 25000 --colors --reporter mocha-jenkins-reporter || true"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1"
+  }
+}

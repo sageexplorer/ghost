@@ -41,7 +41,7 @@ app.post('/', function (req, res) {
         break;
       }
       default: {
-        var testURL = process.env.STAGING
+        var testURL = undefined 
         break;
       }// last condition close
     }// switch statement close

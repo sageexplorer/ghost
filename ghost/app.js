@@ -1,13 +1,14 @@
-const express = require('express');
+const express    = require('express');
 const bodyParser = require('body-parser');
-const request = require('request');
-const shell = require('shelljs');
-const slack = require('./callSlack');
+const request    = require('request');
+const shell      = require('shelljs');
+const slack      = require('./callSlack');
 
 require('dotenv').config();
 
 ('use strict');
 
+var app    = express();
 const port = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({ extended: true }));
